@@ -13,23 +13,37 @@ function getComputerChoice(a) {
 const computerSelection = getComputerChoice(a);
 const playerSelection = prompt("Enter your choice: ",);
 
+function capitalize(playerSelection) { // This function takes player input and standardize it. 
+    let firstLetter = playerSelection[0]; //So even player is putting Rock, rock or ROCK or RoCk, this function will convert it into Rock
+    firstLetter = firstLetter.replace(firstLetter, firstLetter.toUpperCase());
+    //return firstLetter;
+    let otherLetters = playerSelection.slice(1, playerSelection.length);
+    let otherLetters2 = otherLetters.toLowerCase();
+    let ans = firstLetter.concat(otherLetters2);
+    return ans;
+}
 
-function game(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
+const playerSelection2 = capitalize(playerSelection);
+
+console.log(computerSelection);
+console.log(playerSelection2);
+
+function game(playerSelection2, computerSelection) {
+    if (playerSelection2 === computerSelection) {
         console.log("It's a tie!");
-    } else if (playerSelection == "Rock" && computerSelection == "Paper") {
+    } else if (playerSelection2 == "Rock" && computerSelection == "Paper") {
         console.log("You lose!");
-    } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+    } else if (playerSelection2 == "Rock" && computerSelection == "Scissors") {
         console.log("You win!");
-    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+    } else if (playerSelection2 == "Paper" && computerSelection == "Rock") {
         console.log("You win!");
-    } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+    } else if (playerSelection2 == "Paper" && computerSelection == "Scissors") {
         console.log("You Lose!");
-    } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+    } else if (playerSelection2 == "Scissors" && computerSelection == "Paper") {
         console.log("You win!");
-    } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+    } else if (playerSelection2 == "Scissors" && computerSelection == "Rock") {
         console.log("You lose!");
     }
 }
 
-game(playerSelection, computerSelection);
+console.log(game(playerSelection2, computerSelection));
