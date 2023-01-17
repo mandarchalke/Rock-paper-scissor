@@ -13,7 +13,7 @@ function getComputerChoice(a) {
 const computerSelection = getComputerChoice(a);
 const playerSelection = prompt("Enter your choice: ",);
 
-function capitalize(playerSelection) { // This function takes player input and standardize it. 
+function standardize(playerSelection) { // This function takes player input and standardize it. 
     let firstLetter = playerSelection[0]; //So even player is putting Rock, rock or ROCK or RoCk, this function will convert it into Rock
     firstLetter = firstLetter.replace(firstLetter, firstLetter.toUpperCase());
     //return firstLetter;
@@ -23,7 +23,7 @@ function capitalize(playerSelection) { // This function takes player input and s
     return ans;
 }
 
-const playerSelection2 = capitalize(playerSelection);
+const playerSelection2 = standardize(playerSelection);
 
 console.log(computerSelection);
 console.log(playerSelection2);
