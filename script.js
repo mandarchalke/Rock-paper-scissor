@@ -1,5 +1,5 @@
 function game() {
-    for (i = 1; i < 6; i++) {
+    for (i = 1; i <= 5; i++) {
         const a = Math.floor(Math.random() * 3);
 
         function getComputerChoice(a) {
