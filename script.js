@@ -18,7 +18,6 @@ function game() {
         function standardize(playerSelection) { // This function takes player input and standardize it. 
             let firstLetter = playerSelection[0]; //So even player is putting Rock, rock or ROCK or RoCk, this function will convert it into Rock
             firstLetter = firstLetter.replace(firstLetter, firstLetter.toUpperCase());
-            //return firstLetter;
             let otherLetters = playerSelection.slice(1, playerSelection.length);
             let otherLetters2 = otherLetters.toLowerCase();
             let ans = firstLetter.concat(otherLetters2);
