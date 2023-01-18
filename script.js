@@ -28,7 +28,7 @@ const playerSelection2 = standardize(playerSelection);
 console.log(computerSelection);
 console.log(playerSelection2);
 
-function game(playerSelection2, computerSelection) {
+function playRound(playerSelection2, computerSelection) {
     if (playerSelection2 === computerSelection) {
         console.log("It's a tie!");
     } else if (playerSelection2 == "Rock" && computerSelection == "Paper") {
@@ -46,4 +46,4 @@ function game(playerSelection2, computerSelection) {
     }
 }
 
-console.log(game(playerSelection2, computerSelection));
+console.log(playRound(playerSelection2, computerSelection));
