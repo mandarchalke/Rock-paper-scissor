@@ -15,7 +15,6 @@ function game() {
         const computerSelection = getComputerChoice(a);
         const playerSelection = prompt("Enter your choice: ",);
 
-
         function standardize(playerSelection) { // This function takes player input and standardize it. 
             let firstLetter = playerSelection[0]; //So even player is putting Rock, rock or ROCK or RoCk, this function will convert it into Rock
             firstLetter = firstLetter.replace(firstLetter, firstLetter.toUpperCase());
@@ -37,20 +36,39 @@ function game() {
                 console.log(`It's a tie!`);
             } else if (playerSelection2 == "Rock" && computerSelection == "Paper") {
                 console.log(`You lose!${computerSelection} beats ${playerSelection2}`);
+                return computerScore = computerScore + 1;
             } else if (playerSelection2 == "Rock" && computerSelection == "Scissors") {
                 console.log(`You win!${playerSelection2} beats ${computerSelection}`);
+                return playerScore = playerScore + 1;
             } else if (playerSelection2 == "Paper" && computerSelection == "Rock") {
                 console.log(`You win!${playerSelection2} beats ${computerSelection}`);
+                return playerScore = playerScore + 1;
             } else if (playerSelection2 == "Paper" && computerSelection == "Scissors") {
                 console.log(`You Lose!${computerSelection} beats ${playerSelection2}`);
+                return computerScore = computerScore + 1;
             } else if (playerSelection2 == "Scissors" && computerSelection == "Paper") {
                 console.log(`You win! ${playerSelection2} beats ${computerSelection}`);
+                return playerScore = playerScore + 1;
             } else if (playerSelection2 == "Scissors" && computerSelection == "Rock") {
                 console.log(`You lose!${computerSelection} beats ${playerSelection2}`);
+                return computerScore = computerScore + 1;
             }
         }
         playRound(playerSelection2, computerSelection);
+        console.log(`Computer score:${computerScore}`);
+        console.log(`Player score:${playerScore}`);
     }
 }
 
-console.log(game());
+let computerScore = 0;
+let playerScore = 0;
+
+game();
+
+if (computerScore === playerScore) {
+    console.log("Its a tie. Play Again!");
+} else if (computerScore > playerScore) {
+    console.log("Computer Won!");
+} else {
+    console.log("Congratulations! Player Won!")
+}
