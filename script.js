@@ -37,22 +37,16 @@ function game() {
                 console.log(`It's a tie!`);
             } else if (playerSelection2 == "Rock" && computerSelection == "Paper") {
                 console.log(`You lose!${computerSelection} beats ${playerSelection2}`);
-                return computerScore++;
             } else if (playerSelection2 == "Rock" && computerSelection == "Scissors") {
                 console.log(`You win!${playerSelection2} beats ${computerSelection}`);
-                return playerScore++;
             } else if (playerSelection2 == "Paper" && computerSelection == "Rock") {
                 console.log(`You win!${playerSelection2} beats ${computerSelection}`);
-                return playerScore++;
             } else if (playerSelection2 == "Paper" && computerSelection == "Scissors") {
                 console.log(`You Lose!${computerSelection} beats ${playerSelection2}`);
-                return computerScore++;
             } else if (playerSelection2 == "Scissors" && computerSelection == "Paper") {
                 console.log(`You win! ${playerSelection2} beats ${computerSelection}`);
-                return playerScore++;
             } else if (playerSelection2 == "Scissors" && computerSelection == "Rock") {
                 console.log(`You lose!${computerSelection} beats ${playerSelection2}`);
-                return computerScore;
             }
         }
         playRound(playerSelection2, computerSelection);
