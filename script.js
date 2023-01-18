@@ -27,8 +27,8 @@ function game() {
 
         const playerSelection2 = standardize(playerSelection);
 
-        console.log(computerSelection);
-        console.log(playerSelection2);
+        console.log("Computer: ", computerSelection);
+        console.log("Player: ", playerSelection2);
 
 
         function playRound(playerSelection2, computerSelection) {
