@@ -1,18 +1,12 @@
 function game() {
     for (i = 1; i <= 5; i++) {
-        const a = Math.floor(Math.random() * 3);
 
-        function getComputerChoice(a) {
-            if (a === 0) {
-                return "Rock";
-            } else if (a === 1) {
-                return "Paper";
-            } else if (a === 2) {
-                return "Scissors";
-            }
+        function getComputerChoice() {
+            const choices = ["Rock", "Paper", "Scissors"];
+            return choices[Math.floor(Math.random() * 3)];
         }
 
-        const computerSelection = getComputerChoice(a);
+        const computerSelection = getComputerChoice();
         const playerSelection = prompt("Enter your choice: ",);
 
         function standardize(playerSelection) { // This function takes player input and standardize it. 
@@ -34,22 +28,22 @@ function game() {
             if (playerSelection2 === computerSelection) {
                 console.log(`It's a tie!`);
             } else if (playerSelection2 == "Rock" && computerSelection == "Paper") {
-                console.log(`You lose!${computerSelection} beats ${playerSelection2}`);
+                console.log(`You lose! ${computerSelection} beats ${playerSelection2}`);
                 return computerScore = computerScore + 1;
             } else if (playerSelection2 == "Rock" && computerSelection == "Scissors") {
-                console.log(`You win!${playerSelection2} beats ${computerSelection}`);
+                console.log(`You win! ${playerSelection2} beats ${computerSelection}`);
                 return playerScore = playerScore + 1;
             } else if (playerSelection2 == "Paper" && computerSelection == "Rock") {
-                console.log(`You win!${playerSelection2} beats ${computerSelection}`);
+                console.log(`You win! ${playerSelection2} beats ${computerSelection}`);
                 return playerScore = playerScore + 1;
             } else if (playerSelection2 == "Paper" && computerSelection == "Scissors") {
-                console.log(`You Lose!${computerSelection} beats ${playerSelection2}`);
+                console.log(`You Lose! ${computerSelection} beats ${playerSelection2}`);
                 return computerScore = computerScore + 1;
             } else if (playerSelection2 == "Scissors" && computerSelection == "Paper") {
                 console.log(`You win! ${playerSelection2} beats ${computerSelection}`);
                 return playerScore = playerScore + 1;
             } else if (playerSelection2 == "Scissors" && computerSelection == "Rock") {
-                console.log(`You lose!${computerSelection} beats ${playerSelection2}`);
+                console.log(`You lose! ${computerSelection} beats ${playerSelection2}`);
                 return computerScore = computerScore + 1;
             }
         }
