@@ -8,7 +8,6 @@ buttons.forEach((button) => {
     })
 })
 
-
 function game() {
 
     function getComputerChoice() {
@@ -18,41 +17,40 @@ function game() {
 
     const computerSelection = getComputerChoice();
 
-    console.log("Computer: ", computerSelection);
-    console.log("Player: ", playerSelection);
+    document.getElementById('computer').innerText = `Computer: ${computerSelection}`;
+    document.getElementById('player').innerText = `Player: ${playerSelection}`;
 
     let computerScore = 0;
     let playerScore = 0;
 
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
-            console.log(`It's a tie!`);
+            return (`It's a tie!`);
         } else if (playerSelection == "Rock" && computerSelection == "Paper") {
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+            return (`You lose! ${computerSelection} beats ${playerSelection}`);
             return computerScore = computerScore + 1;
         } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
-            console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+            return (`You win! ${playerSelection} beats ${computerSelection}`);
             return playerScore = playerScore + 1;
         } else if (playerSelection == "Paper" && computerSelection == "Rock") {
-            console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+            return (`You win! ${playerSelection} beats ${computerSelection}`);
             return playerScore = playerScore + 1;
         } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
-            console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+            return (`You Lose! ${computerSelection} beats ${playerSelection}`);
             return computerScore = computerScore + 1;
         } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
-            console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+            return (`You win! ${playerSelection} beats ${computerSelection}`);
             return playerScore = playerScore + 1;
         } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+            return (`You lose! ${computerSelection} beats ${playerSelection}`);
             return computerScore = computerScore + 1;
         }
     }
 
+    document.getElementById('result').innerText = playRound(playerSelection, computerSelection);;
 
-    playRound(playerSelection, computerSelection);
-
-    //console.log(`Computer score:${computerScore}`); not needed now.
-    //console.log(`Player score:${playerScore}`);
+    console.log(`Computer score:${computerScore}`);
+    console.log(`Player score:${playerScore}`);
 
     /*
         if (computerScore === playerScore) {
@@ -64,8 +62,3 @@ function game() {
         }
     */
 }
-
-
-/*
-
-*/
