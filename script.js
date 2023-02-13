@@ -4,12 +4,14 @@ let playerScore = 0;
 
 const buttons = document.querySelectorAll('button');
 
+
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.innerText;
         game();
     })
-})
+});
+
 
 function game() {
 
@@ -22,8 +24,6 @@ function game() {
 
     document.getElementById('computer').innerText = `Computer: ${computerSelection}`;
     document.getElementById('player').innerText = `Player: ${playerSelection}`;
-
-
 
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
@@ -51,15 +51,14 @@ function game() {
 
     document.getElementById('result').innerText = playRound(playerSelection, computerSelection);;
 
-    document.getElementById('computerScore').innerText = `Computer score:${computerScore}`;
-    document.getElementById('playerScore').innerText = `Player score:${playerScore}`;
+    document.getElementById('computerScore').innerText = `Computer score: ${computerScore}`;
+    document.getElementById('playerScore').innerText = `Player score: ${playerScore}`;
 
     if (playerScore === 5) {
         document.getElementById('finalResult').innerText = `Player Win!`;
     } else if (computerScore === 5) {
-        document.getElementById('finalResult').innerText =`Computer Win!`;
+        document.getElementById('finalResult').innerText = `Computer Win!`;
     }
-
 }
 
 
