@@ -23,8 +23,8 @@ function game() {
 
     const computerSelection = getComputerChoice();
 
-    document.getElementById('computer').innerText = `Computer Selection: ${computerSelection}`;
-    document.getElementById('player').innerText = `Your Selection: ${playerSelection}`;
+    document.getElementById('computer').innerText = `Computer Choice: ${computerSelection}`;
+    document.getElementById('player').innerText = `Your Choice: ${playerSelection}`;
 
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {

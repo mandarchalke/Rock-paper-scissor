@@ -44,3 +44,13 @@ body {
     width: 150px;
     font-weight: 900;
 }
+
+.choices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 800px;
+    font-size: 25px;
+    font-weight: 450;
+}
