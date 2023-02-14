@@ -3,15 +3,12 @@ let computerScore = 0;
 let playerScore = 0;
 
 const buttons = document.querySelectorAll('button');
-
-
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.innerText;
         game();
     })
 });
-
 
 function game() {
 
