@@ -6,7 +6,11 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.innerText;
-        game();
+        if (computerScore < 5 && playerScore < 5 ) {
+            game();
+        } else {
+            return;
+        }
     })
 });
 
