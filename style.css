@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid grey;
+    border-radius: 10px;
+    height: 700px;
+    width: 700px;
+}
+
+.header {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    border: 5px solid grey;
+    background-color: azure;
+    margin: 25px;
+    padding: 40px 40px;
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+}
