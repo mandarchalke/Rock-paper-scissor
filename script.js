@@ -6,7 +6,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.innerText;
-        if (computerScore < 5 && playerScore < 5 ) {
+        if (computerScore < 5 && playerScore < 5) {
             game();
         } else {
             return;
@@ -23,8 +23,8 @@ function game() {
 
     const computerSelection = getComputerChoice();
 
-    document.getElementById('computer').innerText = `Computer Choice: ${computerSelection}`;
     document.getElementById('player').innerText = `Your Choice: ${playerSelection}`;
+    document.getElementById('computer').innerText = `Computer Choice: ${computerSelection}`;
 
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
@@ -52,8 +52,8 @@ function game() {
 
     document.getElementById('result').innerText = playRound(playerSelection, computerSelection);;
 
-    document.getElementById('computerScore').innerText = `Computer score: ${computerScore}`;
-    document.getElementById('playerScore').innerText = `Your score: ${playerScore}`;
+    document.getElementById('playerScore').innerText = `You: ${playerScore} `;
+    document.getElementById('computerScore').innerText = ` ${computerScore} :Computer`;
 
     if (playerScore === 5) {
         document.getElementById('finalResult').innerText = `You Win!`;
