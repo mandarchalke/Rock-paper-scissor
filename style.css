@@ -10,10 +10,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 5px solid grey;
+    border: 5px solid #373737;
     border-radius: 10px;
     height: 700px;
     width: 700px;
+    background-color: #a8a8a8b8;
 }
 
 .header {
@@ -28,11 +29,12 @@ body {
 }
 
 .btn {
-    border: 5px solid grey;
-    background-color: azure;
+    border: 5px solid #373737;
+    background-color: #eaeaea;
     margin: 25px;
     padding: 40px 40px;
     border-radius: 10px;
     height: 150px;
     width: 150px;
+    font-weight: 900;
 }
