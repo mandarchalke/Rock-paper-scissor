@@ -23,8 +23,8 @@ function game() {
 
     const computerSelection = getComputerChoice();
 
-    document.getElementById('computer').innerText = `Computer: ${computerSelection}`;
-    document.getElementById('player').innerText = `Player: ${playerSelection}`;
+    document.getElementById('computer').innerText = `Computer Selection: ${computerSelection}`;
+    document.getElementById('player').innerText = `Your Selection: ${playerSelection}`;
 
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
@@ -53,10 +53,10 @@ function game() {
     document.getElementById('result').innerText = playRound(playerSelection, computerSelection);;
 
     document.getElementById('computerScore').innerText = `Computer score: ${computerScore}`;
-    document.getElementById('playerScore').innerText = `Player score: ${playerScore}`;
+    document.getElementById('playerScore').innerText = `Your score: ${playerScore}`;
 
     if (playerScore === 5) {
-        document.getElementById('finalResult').innerText = `Player Win!`;
+        document.getElementById('finalResult').innerText = `You Win!`;
     } else if (computerScore === 5) {
         document.getElementById('finalResult').innerText = `Computer Win!`;
     }

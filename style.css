@@ -22,6 +22,12 @@ body {
     font-weight: 900;
 }
 
+.select {
+    font-size: 25px;
+    font-weight: 450;
+    margin-top: 20px;
+}
+
 .btn-container {
     display: flex;
     justify-content: space-around;
