@@ -50,9 +50,9 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    width: 800px;
-    font-size: 25px;
-    font-weight: 450;
+    width: 700px;
+    font-size: 20px;
+    font-weight: 550;
 }
 
 .score {
@@ -61,6 +61,18 @@ body {
     align-items: center;
     width: 350px;
     margin-top: 20px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+#result {
+    margin-top: 20px;
     font-size: 25px;
-    font-weight: 450;
+    font-weight: 600;
+}
+
+#finalResult {
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 900;
 }
