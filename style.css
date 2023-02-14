@@ -54,3 +54,13 @@ body {
     font-size: 25px;
     font-weight: 450;
 }
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 450;
+}
