@@ -57,8 +57,19 @@ function game() {
 
     if (playerScore === 5) {
         document.getElementById('finalResult').innerText = `You Win!`;
+        replayGame();
     } else if (computerScore === 5) {
         document.getElementById('finalResult').innerText = `Computer Win!`;
+        replayGame();
+    }
+
+    function replayGame() {
+        const replay = document.getElementById('replay');
+        const link = document.createElement('a');
+        link.classList.add('replay-btn');
+        link.innerText = `⟳`;
+        link.setAttribute('href', 'index.html');
+        replay.appendChild(link);
     }
 }
 
