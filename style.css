@@ -76,3 +76,11 @@ body {
     font-size: 35px;
     font-weight: 900;
 }
+
+.replay-btn {
+    font-size: 100px;
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+}
